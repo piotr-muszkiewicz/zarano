@@ -1,0 +1,94 @@
+.news-list {
+  padding: 40px 0 0 0;
+  position: relative;
+  z-index: 1;
+  .heading {
+    margin-bottom: 53px;
+  }
+  &__item {
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 4.5%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    h2 {
+      color: $gray;
+      font-size: 20px;
+      line-height: 21px;
+      letter-spacing: 1px;
+      margin: 0;
+      a {
+        color: $gray;
+        text-decoration: none;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+    p {
+      margin: 43px 0 0 0;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.4px;
+      @include breakpoint(sm) {
+        margin-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: $green;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+  /* the slides */
+  .slick-slide {
+    margin: 0 35px;
+    @include breakpoint(md) {
+      margin: 0 15px;
+    }
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -35px;
+    @include breakpoint(md) {
+      margin: 0 -15px;
+    }
+  }
+
+  &__load {
+    position: absolute;
+    background: url(../images/left-green.png);
+    width: 14px;
+    height: 28px;
+    left: 50%;
+    bottom: -93px;
+    z-index: 1000;
+    transform: rotate(-90deg);
+    transform-origin: 3px 15px;
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+}
+
+.alm-btn-wrap {
+  padding: 0 0 0 0 !important;
+  cursor: pointer;
+  button {
+    background: url(../images/down-green.png) center no-repeat !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+    &.done {
+      opacity: 0 !important;
+    }
+  }
+}
+.ajax-load-more-wrap.infinite .alm-load-more-btn {
+  cursor: pointer !important;
+}

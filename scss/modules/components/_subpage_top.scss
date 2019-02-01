@@ -1,0 +1,10 @@
+.subpage_img {
+  height: 335px;
+  background-size: cover;
+  background-position: center;
+  @include breakpoint(sm) {
+    margin-bottom: -4px;
+    margin-top: -2px;
+    height: 210px;
+  }
+}

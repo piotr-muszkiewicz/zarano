@@ -1,0 +1,161 @@
+.header {
+  overflow: hidden;
+  @include breakpoint(sm) {
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+  }
+  .container {
+    padding-right: 0;
+    padding-left: 15px;
+  }
+  &__logo {
+    float: left;
+    margin: 15px 0 0 43px;
+    @include breakpoint(md) {
+      margin: 15px 0 0 50px;
+    }
+    @include breakpoint(sm) {
+      margin: 12px 0 11px 1%;
+    }
+    img {
+      max-width: 184px;
+      @include breakpoint(md) {
+        max-width: 140px;
+      }
+      @include breakpoint(sm) {
+        max-width: 183px;
+      }
+    }
+  }
+  .menu-toggle {
+    @include breakpoint(sm) {
+      height: 90px;
+      width: 90px;
+      position: absolute;
+      right: 0;
+      top:0;
+      background: $gray;
+      span {
+        position: absolute;
+        left: 33px;
+        width: 25px;
+        height: 3px;
+        background: #FFF;
+        &:nth-child(1) {
+          top: 37px;
+        }
+        &:nth-child(2) {
+          top:45px;
+        }
+        &:nth-child(3) {
+          top:54px;
+        }
+      }
+    }
+  }
+  &__nav {
+    float: right;
+    position: relative;
+    @media all and (min-width: 768px) {
+      display: block !important;
+    }
+    @include breakpoint(sm) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top:90px;
+      z-index: 1000;
+      display: none;
+    }
+    &:after {
+      position: absolute;
+      left: 100%;
+      background: #b7b7b7;
+      width: 10000px;
+      content: "";
+      height: 100%;
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        background: #b7b7b7;
+        @include breakpoint(sm) {
+          float: none;
+          display: block;
+        }
+        a {
+          display: block;
+          color: #FFF;
+          padding: 30px 15px;
+          width: 160px;
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          transition: all 0.3s;
+          font-size: 20px;
+          letter-spacing: 1px;
+          position: relative;
+          overflow: hidden;
+          z-index: 2;
+          @include breakpoint(md) {
+            padding: 20px 10px;
+            width: 120px;
+          }
+          @include breakpoint(sm) {
+            width: 100%;
+            padding: 10px;
+          }
+        }
+        &:after {
+          position: absolute;
+          -webkit-transition: .3s;
+          transition: .3s;
+          content: '';
+          width: 0;
+          bottom: 0;
+          background: #d7d7d7;
+          height: 120%;
+          left: -10%;
+          -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+          z-index: 1;
+        }
+        &.current-menu-item,
+        &:hover {
+          &:after {
+            left: -10%;
+            width: 120%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.infografika {
+  overflow: hidden;
+  clear: both;
+  svg,
+  img {
+    max-width: 960px;
+    margin: 0 auto;
+    display: block;
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+  }
+  @include breakpoint(sm) {
+    &__inner {
+      margin: 0 -64px;
+    }
+  }
+}

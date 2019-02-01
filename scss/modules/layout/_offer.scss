@@ -1,0 +1,93 @@
+.offer-list {
+  &__item {
+    overflow: hidden;
+    margin: 18px 0 72px 0;
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+    }
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &:nth-child(odd) {
+      .offer-list__left {
+        float: left;
+        width: 50%;
+      }
+      .offer-list__right {
+        width: 50%;
+        float: right;
+        background: #f8f8f8;
+        &:after {
+          left: 100%;
+          background: #f8f8f8;
+        }
+      }
+    }
+    &:nth-child(even) {
+      .offer-list__left {
+        float: right;
+        width: 50%;
+      }
+      .offer-list__right {
+        width: 50%;
+        float: left;
+        background: $green;
+        &:after {
+          right: 100%;
+          background: $green;
+        }
+      }
+    }
+  }
+  &__left {
+    padding: 40px 50px 0 50px;
+    @include breakpoint(sm) {
+      width: 100% !important;
+    }
+    @include breakpoint(xs) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .heading {
+      margin-bottom: 0;
+    }
+    p {
+      padding-left: 30px;
+      @include breakpoint(sm) {
+        padding-left: 0;
+      }
+    }
+    .download {
+      float: right;
+      color: $green;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+  &__right {
+    @include breakpoint(sm) {
+      width: 100% !important;
+      height: 360px;
+      line-height: 360px;
+      background: #f8f8f8 !important;
+    }
+    height: 458px;
+    text-align: center;
+    line-height: 458px;
+    position: relative;
+    &:after {
+      position: absolute;
+      height: 100%;
+      top:0;
+      width: 10000px;
+      content: "";
+    }
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 60%;
+      max-height: 60%;
+    }
+  }
+}

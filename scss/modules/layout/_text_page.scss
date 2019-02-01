@@ -1,0 +1,42 @@
+.content-text {
+  &__time {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    background: $green;
+    padding: 33px 33px 33px 0;
+    @include breakpoint(sm){
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: -40px;
+      margin-bottom: 0;
+    }
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: -75px 0 40px 0;
+    &:before {
+      background: url("../images/calendar.png");
+      width: 21px;
+      height: 20px;
+      background-size: 100% 100%;
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      margin: -4px 20px 0 0px;
+    }
+    &:after {
+      position: absolute;
+      height: 100%;
+      top:0;
+      width: 10000px;
+      content: "";
+      background: $green;
+      right: 100%;
+    }
+  }
+  &__inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

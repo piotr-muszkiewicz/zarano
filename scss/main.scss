@@ -1,0 +1,29 @@
+//----------------------------------*\
+// SETTINGS
+//----------------------------------*/
+@charset "UTF-8";
+
+//----------------------------------*\
+// COMPONENTS
+//----------------------------------*/
+
+@import "modules/base/base";
+@import "modules/base/fonts";
+
+@import "modules/base/typography";
+
+@import "modules/components/content";
+@import "modules/components/news-list";
+@import "modules/components/subpage_top";
+@import "modules/components/nav-page";
+
+@import "modules/layout/text_page";
+@import "modules/layout/home";
+@import "modules/layout/offer";
+@import "modules/layout/works";
+@import "modules/layout/contact";
+@import "modules/layout/404";
+
+@import "modules/themes/header";
+@import "modules/themes/footer";
+

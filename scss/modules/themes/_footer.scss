@@ -1,0 +1,154 @@
+.footer {
+  background: $light-gray;
+  margin: 63px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 74px;
+  clear: both;
+  &:after {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    height: 100%;
+    content: "";
+    background: $green;
+    top:0;
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+  &:before {
+    position: absolute;
+    margin-left: -60px;
+    //background-image: url("../images/footer.jpg");
+    //background-size: 100% 100%;
+    top:-1px;
+    left: 50%;
+    z-index: 1;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 60px solid #FFF;
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+  &__left,
+  &__right {
+    position: relative;
+    z-index: 10;
+  }
+  &__logos {
+    max-width: 224px;
+    margin: 58px 0 0 41px;
+    @include breakpoint(sm) {
+      display: inline-block;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &__left {
+    width: 50%;
+    float: left;
+    @include breakpoint(sm) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    float: right;
+    @include breakpoint(sm) {
+      display: none;
+    }
+    ul {
+      margin: 111px -51px 0 113px;
+      @include breakpoint(md) {
+        margin-left: 40px;
+      }
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+        letter-spacing: 1px;
+        a {
+          color: #FFF;
+          font-weight: bold;
+          font-size: 20px;
+          text-decoration: none;
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fundusze {
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 0 50px 0;
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+    img {
+      max-height: 70px;
+    }
+    @include breakpoint(sm) {
+      display: block;
+      img {
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  }
+  &__text {
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 0;
+    }
+  }
+}
+
+.copyright {
+  color: $gray;
+  font-size: 20px;
+  padding: 21px 0;
+  overflow: hidden;
+  border-top: 1px solid #d7d7d7;
+  @include breakpoint(sm) {
+    text-align: center;
+  }
+  p {
+    margin: 0;
+  }
+  &__left {
+    float: left;
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+  }
+  &__right {
+    float: right;
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+    a {
+      color: $gray;
+      text-decoration: none;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
